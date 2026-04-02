@@ -1,3 +1,22 @@
+// --- NEU: Schnellwahl-Logik ---
+const quickBtns = document.querySelectorAll('.quick-btn');
+const inputField = document.getElementById('optionsInput');
+
+quickBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        const word = btn.innerText; // Holt das Wort aus dem Button (z.B. "Pizza")
+        
+        // Check: Wenn schon was im Feld steht und kein Komma am Ende ist, füge eins hinzu
+        if (inputField.value.trim() !== "" && !inputField.value.endsWith(',')) {
+            inputField.value += ", ";
+        }
+        
+        // Füge das Wort ein
+        inputField.value += word;
+    });
+});
+// ------------------------------
+
 document.getElementById('spinBtn').addEventListener('click', function() {
     const input = document.getElementById('optionsInput').value;
     const choices = input.split(',').map(item => item.trim()).filter(item => item !== "");
@@ -39,6 +58,13 @@ document.getElementById('spinBtn').addEventListener('click', function() {
             
             // Button wieder freigeben
             btn.disabled = false; 
+
+            // Konfetti Effekt auslösen (confetti-Bibliothek)
+            confetti({
+                particleCount: 150, // Anzahl der Schnipsel (gut für Performance)
+                spread: 80,         // Wie weit es streut
+                origin: { y: 0.6 }  // Startet leicht unter der Mitte des Bildschirms
+            });
         }
     }, speed);
 });

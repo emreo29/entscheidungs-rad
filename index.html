@@ -2,6 +2,7 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Wichtig für mobile Geräte -->
     <title>Entscheidungs-Helfer</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -14,6 +15,15 @@
         
         <section class="input-area">
             <input type="text" id="optionsInput" placeholder="Pizza, Pasta, Burger..." aria-label="Optionen eingeben">
+
+            <div class="quick-add">
+                <button class="quick-btn" type="button">Pizza</button>
+                <button class="quick-btn" type="button">Döner</button>
+                <button class="quick-btn" type="button">Burger</button>
+                <button class="quick-btn" type="button">Zocken</button>
+                <button class="quick-btn" type="button">Schlafen</button>
+            </div>
+
             <button id="spinBtn">Entscheide für mich!</button>
         </section>
 
@@ -24,6 +34,8 @@
             <p>Emre Öztürk</p>
         </section>
     </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script> <!-- CDN für Konfetti-Bibliothek -->
 
     <script src="app.js"></script>
 </body>

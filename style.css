@@ -49,3 +49,34 @@ output {
     font-size: 0.9rem;
     color: #555;
 }
+
+/* Macht den Hauptkasten auf Handys flexibler */
+main.container {
+    width: 70%; /* Nimmt 70% der Handybreite ein */
+    max-width: 500px; /* Wird auf dem PC nicht riesig */
+    margin: 0 auto; /* Zentriert den Kasten */
+}
+
+/* Style für die neuen Schnell-Buttons */
+.quick-add {
+    display: flex;
+    flex-wrap: wrap; /* Bricht in die nächste Zeile um, wenn kein Platz ist */
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.quick-btn {
+    background-color: transparent;
+    color: #e94560; /* Unser Neon-Pink von vorhin */
+    border: 1px solid #e94560;
+    padding: 5px 12px;
+    border-radius: 20px; /* Macht schöne runde Pillen-Formen */
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.quick-btn:hover, .quick-btn:active {
+    background-color: #e94560;
+    color: white;
+}
