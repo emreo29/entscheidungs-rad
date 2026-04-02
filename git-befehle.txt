@@ -1,0 +1,56 @@
+======================================================
+           MEIN GIT SPICKZETTEL (Cheat Sheet)
+======================================================
+
+--- 1. DER TÄGLICHE WORKFLOW (Das machst du zu 99%) ---
+
+a) Was habe ich gerade geändert?
+   git status
+
+b) ALLE Änderungen für den Upload vormerken (in den Karton packen):
+   git add .
+
+c) Den Änderungen einen Namen geben (Karton beschriften):
+   git commit -m "Hier kurze Beschreibung, z.B. Button rot gemacht"
+
+d) Hochladen zu GitHub (Karton abschicken):
+   git push origin main
+
+
+--- 2. UPDATES HOLEN (z.B. nach Änderungen direkt auf GitHub) ---
+
+Neuesten Stand von GitHub auf meinen PC laden:
+   git pull origin main
+
+
+--- 3. FEHLERBEHEBUNG (Wenn es mal klemmt) ---
+
+Problem: GitHub meckert wegen "master" vs "main"?
+Lösung (Branch umbenennen):
+   git branch -M main
+
+Problem: GitHub blockiert den Upload, aber mein PC hat recht?
+Lösung (Erzwingen / Force Push - Vorsicht, überschreibt GitHub!):
+   git push -f origin main
+
+Die letzten Uploads (Historie) ansehen:
+   git log
+   (Mit der Taste "Q" kommst du da wieder raus)
+
+
+--- 4. ERSTMALIGE EINRICHTUNG (Nur 1x pro neuem Projekt) ---
+
+1. Ordner zu einem Git-Projekt machen:
+   git init
+
+2. Mit GitHub verknüpfen:
+   git remote add origin https://github.com/DEIN_NAME/DEIN_PROJEKT.git
+
+
+Denk bei Git immer an einen Paketversand:
+
+git add . -> Du legst alle neuen Gegenstände in einen Karton.
+
+git commit -m "..." -> Du klebst ein Versandetikett mit Inhalt drauf.
+
+git push -> Du gibst das Paket bei der Post (GitHub) ab.
