@@ -80,3 +80,50 @@ main.container {
     background-color: #e94560;
     color: white;
 }
+
+/* --- Der Schalter oben rechts --- */
+.theme-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: transform 0.2s; /* Für einen coolen Hover-Effekt */
+}
+
+.theme-btn:hover {
+    transform: scale(1.2); /* Wird beim Drüberfahren etwas größer */
+}
+
+/* --- DAS DARK-MODE DESIGN --- */
+/* Wenn der body die Klasse "dark-mode" bekommt, überschreiben wir die Farben */
+body.dark-mode {
+    background-color: #1a1a2e; /* Ein sehr dunkles Blau/Schwarz */
+    color: #ffffff;
+}
+
+body.dark-mode main.container {
+    background-color: #16213e; /* Ein Tick heller als der Hintergrund */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7); /* Stärkerer Schatten */
+}
+
+body.dark-mode input {
+    background-color: #0f3460;
+    color: white;
+    border: 1px solid #e94560;
+}
+
+/* Der Trommelwirbel-Text */
+.status-text {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #888; /* Ein dezentes Grau */
+    min-height: 25px; /* Hält den Platz frei, auch wenn kein Text da ist */
+    margin-bottom: 5px;
+}
+
+body.dark-mode .status-text {
+    color: #aaa; /* Etwas helleres Grau für den Dark Mode */
+}
