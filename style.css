@@ -127,3 +127,32 @@ body.dark-mode input {
 body.dark-mode .status-text {
     color: #aaa; /* Etwas helleres Grau für den Dark Mode */
 }
+
+/* Damit die Buttons schön nebeneinander stehen */
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+/* Der neue Papierkorb-Button */
+.clear-btn {
+    background-color: transparent;
+    border: 2px solid #ccc;
+    border-radius: 8px; /* Oder was auch immer dein Hauptbutton hat */
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.clear-btn:hover {
+    background-color: #ff4c4c;
+    border-color: #ff4c4c;
+    color: white;
+}
+
+body.dark-mode .clear-btn {
+    border-color: #555;
+}

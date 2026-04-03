@@ -11,7 +11,8 @@
 
     <main class="container">
         <header>
-            <h1>Was soll ich tun?</h1>
+            <h1>Willkommen beim Entscheidungs-Helfer!</h1>
+            <p>Unentschlossen? Lass mich für dich entscheiden!</p>
             <p>Gib deine Optionen mit Komma getrennt ein:</p>
         </header>
         
@@ -24,9 +25,18 @@
                 <button class="quick-btn" type="button">Burger</button>
                 <button class="quick-btn" type="button">Zocken</button>
                 <button class="quick-btn" type="button">Schlafen</button>
+                <button class="quick-btn" type="button">Sushi</button>
+                <button class="quick-btn" type="button">Pasta</button>
+                <button class="quick-btn" type="button">Kino</button>
+                <button class="quick-btn" type="button">Gym</button>
+                <button class="quick-btn" type="button">Netflix</button>
+                <button class="quick-btn" type="button">Spazieren</button>
             </div>
 
-            <button id="spinBtn">Entscheide für mich!</button>
+            <div class="button-group"> <!-- Div umändern? -->   
+                <button id="spinBtn">Entscheide für mich!</button>
+                <button id="clearBtn" class="clear-btn" aria-label="Eingabe löschen">🗑️</button>
+            </div>
         </section>
 
         <p id="statusText" class="status-text"></p> 
@@ -34,12 +44,13 @@
         <output id="result">?</output>
 
         <section class="hinweis">
-            <p>Seite wird noch verbessert und ist in Entwicklung.</p>
-            <p>Emre Öztürk</p>
+            <p>Entwickler: Emre Öztürk</p>
         </section>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script> <!-- CDN für Konfetti-Bibliothek -->
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!-- schönere Alert Anzeige -->
 
     <script src="app.js"></script>
 </body>
