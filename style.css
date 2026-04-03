@@ -52,9 +52,9 @@ output {
 
 /* Macht den Hauptkasten auf Handys flexibler */
 main.container {
-    width: 70%; /* Nimmt 70% der Handybreite ein */
+    width: 60%; /* Nimmt 70% der Handybreite ein */
     max-width: 500px; /* Wird auf dem PC nicht riesig */
-    margin: 0 auto; /* Zentriert den Kasten */
+    margin: 0 auto; /* Zentriert den Kasten */ 
 }
 
 /* Style für die neuen Schnell-Buttons */
@@ -83,14 +83,15 @@ main.container {
 
 /* --- Der Schalter oben rechts --- */
 .theme-btn {
-    position: absolute;
-    top: 20px;
-    right: 20px;
+    position: fixed; /*  Klebt jetzt fest auf der Kamera-Linse/Bildschirmrand! */
+    top: 15px;      /* Abstand vom oberen Rand des weißen Kastens */
+    right: 15px;    /* Abstand vom rechten Rand des weißen Kastens */
     background: none;
     border: none;
     font-size: 1.8rem;
     cursor: pointer;
     transition: transform 0.2s; /* Für einen coolen Hover-Effekt */
+    z-index: 1000; /* Stellt sicher, dass er sich immer über alles andere legt */
 }
 
 .theme-btn:hover {
