@@ -8,10 +8,14 @@ body {
     background-color: #1a1a2e;
 }
 
+h1 {
+    font-size: 1.5rem;
+}
+
 main {
     text-align: center;
     background: white;
-    padding: 2rem;
+    padding: 1rem;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
@@ -52,7 +56,7 @@ output {
 
 /* Macht den Hauptkasten auf Handys flexibler */
 main.container {
-    width: 60%; /* Nimmt 70% der Handybreite ein */
+    width: 70%; /* Nimmt 70% der Handybreite ein */
     max-width: 500px; /* Wird auf dem PC nicht riesig */
     margin: 0 auto; /* Zentriert den Kasten */ 
 }
